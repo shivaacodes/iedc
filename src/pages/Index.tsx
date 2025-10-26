@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import LatestUpdates from "@/components/LatestUpdates";
 import EventCard from "@/components/EventCard";
+import PastEventCard from "@/components/PastEventCard";
 
 const Index = () => {
   return (
@@ -65,6 +66,35 @@ Wanna know what the program's all about?"
                   footer="Come as you are; leave as a founder."
                 />
               </div>
+
+              <h3 className="font-serif text-2xl text-center mt-16 mb-8 pb-2 border-b border-border">
+                Past Events
+              </h3>
+
+              <div className="grid grid-cols-3 gap-8">
+                <PastEventCard
+                  title="Makeaton 7.0"
+                  description="CITTIC CUSAT proudly hosted MAKE-A-TON 7.0 - powered by Eduport! The event brought together innovators and coders for Kerala's most exciting hackathon, complete with MLH. With a special track on 'Best Use of Conductor' sponsored by Orkes, along with other exciting tracks by Eduport, GoDaddy, Aarbit, Stremlit, Cloudflare and more, participants competed for prizes worth over 7 lakh in cash and 8 track prizes."
+                  imagePlaceholder="Makeaton 7.0 Poster"
+                />
+                <PastEventCard
+                  title="Innovate and Elevate"
+                  description="Innovate & Elevate: Empowering Entrepreneurs. Gain insider insights, guidance from experts, and network with peers. Don't miss this opportunity to kickstart your entrepreneurial journey!"
+                  imagePlaceholder="Innovate and Elevate Poster"
+                />
+                <PastEventCard
+                  title="Redbull Basement"
+                  description="Redbull basement powered by Make-A-Ton 7.0. Level Up Your Ideas ! Got that creative spark buzzing like a rogue WiFi signal? It's time to take them global with Red Bull Basement!"
+                  imagePlaceholder="Redbull Basement Poster"
+                />
+              </div>
+            </section>
+
+            {/* Incubation Section */}
+            <section className="mt-16">
+              <h2 className="font-serif text-3xl font-bold mb-8 pb-2 border-b border-border">
+                Incubation
+              </h2>
             </section>
           </div>
 
