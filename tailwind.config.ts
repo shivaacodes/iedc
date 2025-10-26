@@ -12,12 +12,25 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontSize: {
+      'sm': '0.875rem',
+      'base': '1.125rem',
+      'lg': '1.25rem',
+      'xl': '1.5rem',
+      '2xl': '1.75rem',
+      '3xl': '2.25rem',
+      '4xl': '3rem',
+      '5xl': '4rem',
+    },
     extend: {
       fontFamily: {
         'serif': ['Playfair Display', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
+        'sans': ['Lora', 'sans-serif'],
       },
       colors: {
+        sky: {
+          '500': '#2563EB',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

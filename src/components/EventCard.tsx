@@ -6,7 +6,7 @@ interface EventCardProps {
   registerText?: string;
   registerUrl?: string;
   footer?: string;
-  imagePlaceholder?: boolean;
+  imageUrl?: string;
 }
 
 const EventCard = ({
@@ -17,14 +17,15 @@ const EventCard = ({
   registerText,
   registerUrl,
   footer,
-  imagePlaceholder = true,
+  imageUrl,
 }: EventCardProps) => {
   return (
-    <div className="border border-border p-6 flex gap-6">
-      <div className="flex-1">
-        <p className="mb-4 leading-relaxed">{description}</p>
+    <div className="border-2 border-black p-0 flex gap-8">
+      <div className="flex-1 p-8">
+        <h3 className="font-serif text-3xl mb-6">{title}</h3>
+        <p className="mb-6 leading-relaxed text-lg">{description}</p>
         {linkText && linkUrl && (
-          <p className="mb-2">
+          <p className="mb-4 text-lg">
             <a href={linkUrl} className="text-blue-600 underline hover:text-blue-800">
               {linkText}
             </a>
@@ -32,19 +33,19 @@ const EventCard = ({
         )}
         {registerText && registerUrl && (
           <>
-            <p className="mb-2">Already SOLD? Register now:</p>
-            <p className="mb-4">
+            <p className="mb-4 text-lg">Already SOLD? Register now:</p>
+            <p className="mb-6">
               <a href={registerUrl} className="text-blue-600 underline hover:text-blue-800">
                 {registerText}
               </a>
             </p>
           </>
         )}
-        {footer && <p className="font-medium">{footer}</p>}
+        {footer && <p className="font-medium text-lg">{footer}</p>}
       </div>
-      {imagePlaceholder && (
-        <div className="w-48 flex-shrink-0 bg-muted flex items-center justify-center">
-          <span className="text-muted-foreground text-sm">Event Image</span>
+      {imageUrl && (
+        <div className="w-64">
+          <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
         </div>
       )}
     </div>

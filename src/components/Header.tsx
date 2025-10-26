@@ -1,58 +1,60 @@
 import { Link } from "react-router-dom";
+import Clock from "./Clock";
 
 const Header = () => {
   return (
-    <header className="w-full bg-background border-b border-border">
-      <div className="max-w-7xl mx-auto px-8 py-6">
-        <div className="flex items-center justify-between mb-8">
+    <header className="w-full bg-background py-4">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex items-center justify-between mb-4">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-tight">IEDC</span>
-            <span className="text-xl font-light underline underline-offset-2">CUSAT</span>
+            <img src="/IEDC Logo.svg" alt="IEDC Logo" className="h-12" />
           </Link>
+          <Clock />
         </div>
         
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <h1 className="font-serif text-5xl font-bold mb-2">IEDC CUSAT</h1>
-          <p className="text-sm tracking-widest text-muted-foreground uppercase">
+          <p className="text-base tracking-widest text-muted-foreground uppercase">
             Innovation Development and Entrepreneurship Development Cell
           </p>
         </div>
         
         <nav className="border-t border-border pt-4">
-          <ul className="flex justify-center gap-12 text-sm font-medium">
+          <ul className="flex justify-center gap-12 text-base font-medium">
             <li>
-              <Link to="/" className="hover:text-accent transition-colors">
+              <a href="#home" className="hover:text-sky-500 transition-colors duration-300">
                 HOME
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/about" className="hover:text-accent transition-colors">
+              <a href="#about" className="hover:text-sky-500 transition-colors duration-300">
                 ABOUT US
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/events" className="hover:text-accent transition-colors">
+              <a href="#events" className="hover:text-sky-500 transition-colors duration-300">
                 EVENTS
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/incubation" className="hover:text-accent transition-colors">
+              <a href="#incubation" className="hover:text-sky-500 transition-colors duration-300">
                 INCUBATION
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/team" className="hover:text-accent transition-colors">
+              <a href="#team" className="hover:text-sky-500 transition-colors duration-300">
                 TEAM
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-accent transition-colors">
+              <a href="#contact" className="hover:text-sky-500 transition-colors duration-300">
                 CONTACT
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
       </div>
+      <div className="max-w-7xl mx-auto px-8 border-b border-border my-4"></div>
     </header>
   );
 };
