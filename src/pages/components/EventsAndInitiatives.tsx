@@ -1,5 +1,6 @@
 import EventCard from "@/components/EventCard";
 import PastEventCard from "@/components/PastEventCard";
+import { Separator } from "@/components/ui/separator";
 
 const EventsAndInitiatives = () => {
   return (
@@ -35,7 +36,7 @@ Wanna know what the program's all about? 👀"
         PAST EVENTS
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-8 items-center">
         <div className="px-4">
           <PastEventCard
             title="Makeaton 7.0"
@@ -43,6 +44,7 @@ Wanna know what the program's all about? 👀"
             imageUrl="/Makeaton (1).jpg"
           />
         </div>
+        <Separator orientation="vertical" className="hidden lg:block h-full" />
         <div className="px-4">
           <PastEventCard
             title="Innovate and Elevate"
@@ -52,6 +54,7 @@ Join interactive workshops, hands-on mentoring sessions, and panel discussions w
             imageUrl="/innovate-and-elevate.jpeg"
           />
         </div>
+        <Separator orientation="vertical" className="hidden lg:block h-full" />
         <div className="px-4">
           <PastEventCard
             title="Redbull Basement"

@@ -19,7 +19,8 @@ const Header = () => {
           </p>
         </div>
         
-        <nav className="border-t border-border pt-4">
+        <div className="max-w-7xl mx-auto px-8 border-t border-border mb-4"></div>
+        <nav className="border-b border-border pb-4">
           <ul className="flex justify-center gap-12 text-base font-medium">
             <li>
               <a href="#home" className="hover:text-sky-500 transition-colors duration-300">
@@ -54,7 +55,6 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <div className="max-w-7xl mx-auto px-8 border-b border-border my-4"></div>
     </header>
   );
 };
